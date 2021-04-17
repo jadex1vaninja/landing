@@ -1,3 +1,5 @@
+@import './media-mixin.scss';
+
 * {
   padding: 0;
   margin: 0;
@@ -6,7 +8,93 @@
   list-style: none;
 }
 
+body {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  background-image: url(../src/img/main-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 .header {
-  background-image: url(../src/img/header-bg.jpg);
+  position: relative;
+  width: 100%;
+  height: 1054px;
+  display: flex;
+  flex-direction: column;
+
+  &__banner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  &__banner-img {
+    width: 100%;
+
+    &--mobile {
+      display: none;
+    }
+  }
+
+  &__inner {
+    position: absolute;
+    width: 100%;
+    height: 4.75rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    top: 35.5vw;
+
+    > :first-child {
+      justify-content: flex-end;
+
+      @include _1023 {
+        width: 50%;
+      }
+    }
+
+    > :last-child {
+      justify-content: flex-start;
+
+      @include _1023 {
+        width: 50%;
+      }
+    }
+
+    @include _1023 {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__img-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    width: 33%;
+
+    @include _1023 {
+      width: 100%;
+    }
+  }
+
+  &__logo1 {
+    margin-right: 4rem;
+  }
+
+  &__logo2 {
+    width: 18vw;
+  }
+
+  &__logo3 {
+    width: 9vw;
+    margin-left: 3rem;
+  }
+}
+
+.root {
+  width: 100%;
+  height: 100vh;
 }
