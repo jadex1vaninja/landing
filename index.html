@@ -40,7 +40,6 @@
       </div>
     </header>
     <main class="root">
-
       <!-- Video block -->
       <div class="video">
         <img
@@ -74,12 +73,12 @@
           <div class="register__form">
             <img src="./src/img/DAZN-NTF.png" alt="logo" />
             <form>
-              <input placeholder="Forename" />
-              <input placeholder="Surname" />
-              <input placeholder="Email" />
+              <input required id="name" placeholder="Forename" />
+              <input required id="surname" placeholder="Surname" />
+              <input required type="email" id="email" placeholder="Email" />
               <div class="register__submit">
                 <img src="./src/img/DAZN-NTF.png" alt="logo" />
-                <span>Submit</span>
+                <button type="submit" id="submit">Submit</button>
               </div>
             </form>
           </div>
@@ -111,11 +110,7 @@
     </main>
     <footer class="footer">
       <div class="footer__banner">
-        <img
-          class="footer__banner-img"
-          src="./src/img/footer-bg.jpg"
-          alt=""
-        />
+        <img class="footer__banner-img" src="./src/img/footer-bg.jpg" alt="" />
         <div class="footer__inner">
           <div class="footer__img-wrapper">
             <img class="footer__logo1" src="./src/img/logo.png" alt="" />
@@ -134,4 +129,6 @@
       </div>
     </footer>
   </body>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script src="./index.js"></script>
 </html>

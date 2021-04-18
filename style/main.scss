@@ -357,7 +357,17 @@ body {
       width: 17.9vw;
       display: block;
     }
-    span {
+    button {
+      font-size: 13vw;
+      text-transform: uppercase;
+      padding-top: 10px;
+      cursor: pointer;
+      font-family: "RussoOne-Regular";
+      border: none;
+      outline: none;
+      background: transparent;
+    }
+    button {
       font-size: 13vw;
       text-transform: uppercase;
       padding-top: 10px;
@@ -370,7 +380,7 @@ body {
       img {
         display: none;
       }
-      span {
+      button {
         font-size: 3vw;
         text-transform: uppercase;
         padding-top: unset;
