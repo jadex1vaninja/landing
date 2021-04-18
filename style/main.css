@@ -908,7 +908,18 @@ body {
   display: block;
 }
 
-.register__submit span {
+.register__submit button {
+  font-size: 13vw;
+  text-transform: uppercase;
+  padding-top: 10px;
+  cursor: pointer;
+  font-family: "RussoOne-Regular";
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.register__submit button {
   font-size: 13vw;
   text-transform: uppercase;
   padding-top: 10px;
@@ -926,7 +937,7 @@ body {
   .register__submit img {
     display: none;
   }
-  .register__submit span {
+  .register__submit button {
     font-size: 3vw;
     text-transform: uppercase;
     padding-top: unset;

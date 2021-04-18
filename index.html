@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- REMOVE INDEX -->
+    <meta name="robots" content="noindex" />
+    <meta name="googlebot" content="noindex" />
     <link rel="stylesheet" href="./style/main.css" />
     <link
       rel="stylesheet"
@@ -223,12 +227,12 @@
           <div class="register__form">
             <img src="./src/img/DAZN-NTF.png" alt="logo" />
             <form>
-              <input placeholder="Forename" />
-              <input placeholder="Surname" />
-              <input placeholder="Email" />
+              <input required id="name" placeholder="Forename" />
+              <input required id="surname" placeholder="Surname" />
+              <input required type="email" id="email" placeholder="Email" />
               <div class="register__submit">
                 <img src="./src/img/DAZN-NTF.png" alt="logo" />
-                <span>Submit</span>
+                <button type="submit" id="submit">Submit</button>
               </div>
             </form>
           </div>
@@ -289,4 +293,6 @@
     ></script>
     <script type="text/javascript" src="scripts/carousel.js"></script>
   </body>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script src="./index.js"></script>
 </html>
