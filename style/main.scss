@@ -1,12 +1,268 @@
+$brand-yellow: #dfc358;
+$brand-white: #fff;
+$brand-black: #000;
+$brand-border: #1b1b1b;
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-size: 16px;
+  line-height: 1.2;
   list-style: none;
 }
 
+body {
+  background-image: url('../src/img/marketplace-bg.jpg');
+  background-size: contain;
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  a {
+    color: $brand-black;
+  }
+}
 
 .header {
   background-image: url(../src/img/header-bg.jpg);
+}
+
+.carousel {
+  background-image: url('../src/img/black-bg.png');
+  margin-top: -4rem;
+  padding: 4rem 20%;
+  color: $brand-white;
+  background-size: cover;
+
+  // Styles to hide arrows and fit content
+  @media screen and (max-width: 800px) {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .slick-slider {
+    margin-bottom: 0;
+  }
+
+  .carousel-wrapper {
+    padding: 4rem 0;
+    .item-logo-section,
+    .carousel-item {
+      display: flex;
+      align-items: center;
+    }
+
+    .carousel-item {
+      .item-logo-section {
+        img {
+          &:nth-child(1) {
+            max-width: 300px;
+            width: 60%;
+          }
+          &:nth-child(2) {
+            max-width: 210px;
+            width: 40%;
+          }
+        }
+      }
+
+      .item-content {
+        margin-left: 6%;
+        width: 54%;
+
+        h2 {
+          text-transform: uppercase;
+          padding-bottom: 0.75rem;
+          color: $brand-yellow;
+        }
+
+        .sub-caption-section {
+          display: flex;
+          margin-top: 2.5rem;
+
+          img {
+            margin-right: 1.25rem;
+            max-width: 80px;
+            object-fit: contain;
+            align-self: baseline;
+          }
+
+          a {
+            text-decoration: none;
+            color: $brand-yellow;
+            font-size: 1.25rem;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    .slick-arrow {
+      border: solid $brand-white;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 1rem;
+      &::before {
+        content: unset;
+      }
+      &.slick-prev {
+        left: -5rem;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) rotate(135deg);
+      }
+      &.slick-next {
+        right: -5rem;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) rotate(-45deg);
+      }
+    }
+  }
+}
+
+.card-wrapper {
+  text-transform: uppercase;
+  font-weight: 800;
+  position: relative;
+  top: -4rem;
+
+  .card-section {
+    display: flex;
+    justify-content: center;
+
+    &.slick-slider {
+      margin-bottom: 0;
+    }
+
+    .slick-arrow {
+      border: solid $brand-white;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 1rem;
+      z-index: 2;
+      &::before {
+        content: unset;
+      }
+      &.slick-prev {
+        left: -1rem;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) rotate(135deg);
+      }
+      &.slick-next {
+        right: -1rem;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) rotate(-45deg);
+      }
+    }
+  }
+
+  h2 {
+    text-transform: uppercase;
+    background-color: $brand-yellow;
+    width: min-content;
+    padding: 1rem 4rem;
+    margin: 0 auto;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+
+    &:not(:last-child) {
+      margin-right: 5%;
+    }
+
+    img {
+      position: relative;
+      bottom: -115px;
+      z-index: 2;
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    .container {
+      background: $brand-black;
+      color: $brand-white;
+      position: relative;
+      padding-top: 130px;
+      border-radius: 1rem;
+      text-align: center;
+
+      h4 {
+        color: $brand-yellow;
+        font-size: 1.25rem;
+        letter-spacing: 0.75rem;
+      }
+
+      h3 {
+        padding: 0.5rem 0;
+        font-size: 2rem;
+      }
+
+      .sub-caption {
+        margin: 0 1rem;
+        padding: 1rem 0;
+        border-top: 2px solid $brand-border;
+      }
+    }
+
+    .auction-wrapper {
+      background-color: $brand-yellow;
+      width: 100%;
+      border-radius: 0 0 1rem 1rem;
+      
+      a {
+        text-decoration: none;
+        
+        :nth-child(1) {
+          font-size: 1.25rem;
+          color: $brand-white;
+          padding-top: 1rem;
+        }
+        
+        :nth-child(2) {
+          font-size: 2.75rem;
+          padding-bottom: 1rem;
+        }
+      }
+      
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .carousel {
+    .carousel-wrapper {
+      .carousel-item {
+        flex-direction: column;
+        padding: 0 0.25rem;
+        .item-content {
+          width: 100%;
+          margin: 0;
+        }
+      }
+      .arrow {
+        display: none;
+      }
+    }
+  }
+
+  .card-wrapper {
+    .card-section {
+      width: 80%;
+      margin: 0 auto;
+    }
+    .card {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+  }
 }
