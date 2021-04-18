@@ -12,4 +12,7 @@ submit.addEventListener("click", async (evt) => {
     `https://mailapi.vercel.app/api/send-mail?email=${email}&name=${name}&surname=${surname}`
   );
   const data = await res.json();
+
+  window.scrollTo(0, 0);
+  location.reload();
 });
