@@ -52,7 +52,7 @@ body {
     position: relative;
 
     @include _768 {
-      height: 75vh;
+      height: 100%;
     }
   }
 

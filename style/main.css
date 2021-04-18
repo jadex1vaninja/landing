@@ -58,7 +58,7 @@ body {
 
 @media (min-width: 768px) {
   .header__banner {
-    height: 75vh;
+    height: 100%;
   }
 }
 
