@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $('.carousel-wrapper').slick({
+  $('.carousel__carousel-wrapper').slick({
     infinite: true,
     speed: 500,
     cssEase: 'linear',
@@ -17,7 +17,7 @@ $(document).ready(function () {
     ],
   });
 
-  $('.card-section').slick({
+  $('.card__card-wrapper').slick({
     speed: 500,
     cssEase: 'linear',
     useTransform: false,
