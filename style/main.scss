@@ -38,7 +38,7 @@ body {
   padding: 0 28px;
 
   @include _320 {
-    height: 500px;
+    height: 420px;
   }
 
   @include _768 {
@@ -48,7 +48,7 @@ body {
 
   &__banner {
     width: 100%;
-    height: 350px;
+    height: 300px;
     position: relative;
 
     @include _768 {
@@ -87,7 +87,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    top: 310px;
+    top: 265px;
     // padding: 0 65px;
 
     > :first-child {
@@ -135,7 +135,7 @@ body {
     flex-grow: 1;
     width: 100%;
     order: 1;
-    margin-bottom: 32px;
+    margin-bottom: 14px;
 
     @include _768 {
       width: 33%;
@@ -164,7 +164,7 @@ body {
 
   &__title {
     color: white;
-    font-size: 45px;
+    font-size: 41px;
     line-height: 34px;
 
     @include _768 {
@@ -174,7 +174,7 @@ body {
 
   &__text {
     color: white;
-    font-size: 16px;
+    font-size: 14px;
     letter-spacing: 3px;
     line-height: 27px;
 
@@ -226,7 +226,7 @@ body {
   }
 
   &__carousel-wrapper {
-    padding: 4rem 0;
+    padding: 1rem 0 4rem 0;
 
     &.slick-initialized {
       .slick-slide {
