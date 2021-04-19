@@ -560,8 +560,15 @@ body {
 }
 
 .card__content-wrapper h3 {
-  padding: 0.5rem 0;
   font-size: 2rem;
+}
+
+.card__content-wrapper h3.first-description {
+  padding-top: 0.5rem;
+}
+
+.card__content-wrapper h3.second-description {
+  padding-bottom: 0.5rem;
 }
 
 .card__sub-caption {

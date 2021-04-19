@@ -431,9 +431,15 @@ body {
     }
 
     h3 {
-      padding: 0.5rem 0;
       font-size: 2rem;
     }
+    h3.first-description{
+      padding-top: 0.5rem;
+    }
+     h3.second-description {
+      padding-bottom: 0.5rem;
+    }
+    
   }
 
   &__sub-caption {
